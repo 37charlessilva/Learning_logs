@@ -24,5 +24,8 @@ class Entry(models.Model):
 
 
     def __str__(self):
-        """Devolve uma representação em string do modelo."""
+        """Devolve uma representação em string do modelo se ele tiver mais de 50 caracteres."""
+        if(len(self.text) <  50):
+            return self.text[:50]
+        
         return self.text[:50] + "..."
