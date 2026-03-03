@@ -3,8 +3,13 @@
 from django.urls import path
 from . import views
 
-app_name = 'templates/learning_logs'
+app_name = 'learning_logs'
 
 urlpatterns = [
-    path('', views.index, name='index')
+    # Página inicial
+    path('', views.index, name='index'),
+    # Mostra  todos os assuntos
+    path('topics/', views.topics, name='topics'),
+    # Página de detalhes para um único assunto
+    path('topics/<int:topic_id>/', views.topic, name = 'topic'),
 ]
