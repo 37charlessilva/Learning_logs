@@ -1,0 +1,8 @@
+{% block content %}
+<form action="{% url 'users:logout' %}" method="post" style="display:inline;">
+    {% csrf_token %}
+    <button type="submit" style="background:none; border:none; color:blue; cursor:pointer; padding:0;">
+        Log out
+    </button>
+</form>
+{% endblock content %}

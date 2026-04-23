@@ -9,9 +9,11 @@ __pycache__/
 
 # Banco de dados
 db.sqlite3
+migrations/
 
 # Vscode 
 .vscode/
 
 # Arquivos do sistema
 .DS_Store
+
